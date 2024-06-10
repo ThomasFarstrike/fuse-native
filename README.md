@@ -76,7 +76,7 @@ Create a new `Fuse` object.
   force: false,  // Attempt to unmount a the mountpoint before remounting.
   mkdir: false   // Create the mountpoint before mounting.
 ```
-Additionally, all (FUSE-specific options)[http://man7.org/linux/man-pages/man8/mount.fuse.8.html] will be passed to the underlying FUSE module (though we use camel casing instead of snake casing).
+Additionally, all (FUSE-specific options)[https://www.man7.org/linux/man-pages/man8/mount.fuse3.8.html] will be passed to the underlying FUSE module (though we use camel casing instead of snake casing).
 
 #### `Fuse.isConfigured(cb)`
 
@@ -96,7 +96,7 @@ method does.
 See the CLI section below on how to run these commands from the command line if you prefer doing that.
 
 ### FUSE API
-Most of the [FUSE api](http://fuse.sourceforge.net/doxygen/structfuse__operations.html) is supported. In general the callback for each op should be called with `cb(returnCode, [value])` where the return code is a number (`0` for OK and `< 0` for errors). See below for a list of POSIX error codes.
+Most of the [FUSE api](https://libfuse.github.io/doxygen/structfuse__operations.html) is supported. In general the callback for each op should be called with `cb(returnCode, [value])` where the return code is a number (`0` for OK and `< 0` for errors). See below for a list of POSIX error codes.
 
 #### `ops.init(cb)`
 
